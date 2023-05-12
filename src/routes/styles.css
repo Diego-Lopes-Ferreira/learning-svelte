@@ -1,0 +1,151 @@
+@import '@fontsource/fira-mono';
+
+:root {
+  --font-body: 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Fira Mono', monospace;
+  --color-bg-0: rgb(202, 216, 228);
+  --color-bg-1: hsl(209, 36%, 86%);
+  --color-bg-2: hsl(224, 44%, 95%);
+  --color-theme-1: #ff3e00;
+  --color-theme-2: #4075a6;
+  --color-green: #00ff00;
+  --color-red: #ff0000;
+  --color-text: rgba(0, 0, 0, 0.7);
+  --color-text-fade: rgba(0, 0, 0, 0.2);
+  --color-text-dark: rgb(245, 245, 245);
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  font-family: var(--font-body);
+}
+
+body {
+  min-height: 100vh;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-theme-1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+pre {
+  font-size: 16px;
+  font-family: var(--font-mono);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 3px;
+  box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+  padding: 0.5em;
+  overflow-x: auto;
+  color: var(--color-text);
+}
+
+input,
+label,
+button {
+  display: block;
+  font-size: inherit;
+  font-family: inherit;
+  border: 0;
+}
+
+button,
+input[type="color"] {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="number"] {
+  cursor: text;
+}
+
+/*
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+*/
+
+textarea {
+  resize: vertical;
+  min-height: 3rem;
+}
+
+
+/* # UTILS */
+main.fill-screen-center {
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  outline: 0.25rem solid var(--color-theme-2);
+}
+
+/* # SCREEN FORM: A form that uses the hole screen k */
+.screen-form {
+  width: 100%;
+  /* min-height: 100%; */
+  margin: 1rem 1rem;
+  padding: 2rem;
+  background-color: var(--color-bg-1);
+  max-width: var(--column-width);
+}
+
+.screen-form label {
+  margin-top: 0.5rem;
+}
+
+.screen-form input,
+.screen-form textarea,
+.screen-form select {
+  font-family: var(--font-body);
+  outline: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-bg-2);
+}
+
+.screen-form input[type="color"] {
+  padding: 0.25rem;
+}
+
+.screen-form button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--color-theme-1);
+}
+
+.screen-form h2 {
+  margin-top: 2rem;
+  border-top: 0.25rem solid var(--color-theme-1);
+  border-radius: 0;
+}
